@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title','LISTA DE ASIGNACIONES')
-<<<<<<< HEAD
+
 @section('content')
 
     <div class="container">
@@ -12,7 +12,7 @@
         <h1>ASIGNACIONES</h1>
         <div>
             <p>Aqui se puede conocer la lista de Facturas y el detalle de los materiales asignados</p>
-=======
+
 
 @section('content')
 
@@ -20,7 +20,7 @@
         <h1>ASIGNACIONES</h1>
         <div>
             <p>Aqui se puede ver la lista de Facturas y el detalle de sus materiales asignados</p>
->>>>>>> origin/master
+
 
 
             <table class="table table-responsive table-bordered">

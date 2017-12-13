@@ -4,7 +4,7 @@
 
 @section('content')
 
-<<<<<<< HEAD
+
 
 
     <div class="container">
@@ -13,9 +13,9 @@
             <a class="btn btn-primary btn-lg" href="../asignaciones">Atrás</a>
         </div>
 
-=======
+
     <div class="container">
->>>>>>> origin/master
+
         <h1>ASIGNACIONES</h1>
         <div>
             <h3>Estos son los materiales de la factura {{$id}}</h3>
