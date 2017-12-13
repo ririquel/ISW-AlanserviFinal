@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="container">
-<<<<<<< HEAD
+
         <div>
             <a class="btn btn-primary btn-lg" href="./home">Home</a>
         </div>
@@ -13,16 +13,16 @@
         <h1>ASIGNACIONES</h1>
         <div>
             <h3>Aquí se puede conocer el listado de obras y el detalle de los materiales asignados</h3>
-=======
+
         <h1>ASIGNACIONES</h1>
         <div>
             <h3>Estos son los materiales de la factura {{$id}}</h3>
->>>>>>> origin/master
+
 
             <table class="table table-responsive table-bordered table-striped table-hover">
                 <thead>
                 <tr>
-<<<<<<< HEAD
+
                     <th>Nombre de la Obra</th>
                     <th>Direccion de la Obra</th>
                     <th>Empresa Mandante</th>
@@ -39,7 +39,7 @@
                         <td>{{$obra->rubro_obra}}</td>
                         <td><a href="./AsignacionesObra/{{$obra->id}}">{{$obra->id}}</a></td>
 
-=======
+
                     <th>ID. Material</th>
                     <th>Nombre del Material</th>
                     <th>Codigo del Material</th>
@@ -54,8 +54,7 @@
                         <td>{{$asis->nombre}}</td>
                         <td>{{$asis->codigo}}</td>
                         <td>{{$asis->cantidad}}</td>
-                        <td>{{$asis->nombre_obra}}</td>
->>>>>>> origin/master
+
                     </tr>
                 @endforeach
                 </tbody>

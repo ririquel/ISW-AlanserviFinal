@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
+
 use App\Material;
 use App\Obra;
 use Illuminate\Http\Request;
 use DB;
-=======
+
 use Illuminate\Http\Request;
 
->>>>>>> origin/master
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -23,10 +23,10 @@ class AsignacionesObraController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
+
         $obras = Obra::all();
         return view('asignaciones.asignacionobra', ['obras' => $obras]);
-=======
+
         //
     }
 
@@ -49,22 +49,18 @@ class AsignacionesObraController extends Controller
     public function store(Request $request)
     {
         //
->>>>>>> origin/master
+
     }
 
     /**
      * Display the specified resource.
      *
-<<<<<<< HEAD
-     * @param  int $id
-=======
-     * @param  int  $id
->>>>>>> origin/master
+
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-<<<<<<< HEAD
+
         $mates = Material::leftjoin('obras', 'materiales.obra_id', '=', 'obras.id')
             ->select('materiales.id', 'materiales.nombre', 'materiales.codigo', 'materiales.cantidad', 'materiales.precio_unitario')
             ->where('materiales.obra_id', '=', $id)
@@ -78,7 +74,7 @@ class AsignacionesObraController extends Controller
         return view('asignaciones.asignaobra', ['id' => $id, 'mates' => $mates, 'total' => $total]);
     }
 
-=======
+
         //
     }
 
@@ -115,5 +111,5 @@ class AsignacionesObraController extends Controller
     {
         //
     }
->>>>>>> origin/master
+
 }

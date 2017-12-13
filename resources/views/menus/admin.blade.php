@@ -52,10 +52,10 @@
                                     class="caret"></span><span style="font-size:16px;"
                                                                class="pull-right hidden-xs showopacity glyphicon glyphicon-search"></span></a>
                         <ul class="dropdown-menu forAnimate" role="menu">
-<<<<<<< HEAD
+
                             <li><a href="{{url('asignaciones')}}">Por facturas</a></li>
                             <li><a href="{{url('AsignacionesObra')}}">Por obras</a></li>
-=======
+
                             <li><a href="{{url('asignaciones')}}">Por obra</a></li>
                         </ul>
                     </li>
@@ -66,7 +66,7 @@
                                                                class="pull-right hidden-xs showopacity glyphicon glyphicon-plus"></span></a>
                         <ul class="dropdown-menu forAnimate" role="menu">
                             <li><a href="{{route('material.index')}}">Lista de Materiales</a></li>
->>>>>>> origin/master
+
                         </ul>
                     </li>
                     <!--Menu de Resumen -->
