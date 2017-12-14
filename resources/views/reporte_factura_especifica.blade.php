@@ -3,7 +3,7 @@
 
 body {font-family: Arial, Helvetica, sans-serif;}
 table { font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
- font-size: 16px; margin: 1px; text-align: left; }
+ font-size: 16px; margin: 0px; text-align: left; }
 th { font-size: 16px; font-weight: normal; padding: 1px; background: #b9c9fe;
  border-top: 4px solid #aabcfe; border-bottom: 1px solid #fff;
  color: #039;
@@ -29,23 +29,27 @@ tr:hover td { background: #d0dafd; color: #339; }
 </head>
 <body>
 
-
-<h1>INFORMACION FACTURA N°</h1>
+@foreach($factura_especifica as $factura_especifica)
+<h1>INFORMACION FACTURA N° {{$factura_especifica->numero_factura}}</h1>
 
 <h4>Datos proveedor</h4>
   <TABLE BORDER class="tabla_1">
+ 
+
+ 
   <TR>
-    <TD>Numero factura: </TD> <TD>aca va el numero de factura</TD>
+    <TD>Numero factura: </TD> <TD>{{$factura_especifica->numero_factura}}</TD>
   </TR>
   <TR>
-    <TD>Nombre Proveedor: </TD> <TD>aca va el nombre del proveedor</TD> 
+    <TD>Nombre Proveedor: </TD> <TD>{{$factura_especifica->nombre_proveedor}}</TD> 
   </TR>
   <TR>
-    <TD>Rut Proveedor: </TD> <TD>aca va el rut del proveedor</TD> 
+    <TD>Rut Proveedor: </TD> <TD>{{$factura_especifica->rut_proveedor}}</TD> 
   </TR>
   <TR>
-    <TD>Fecha emision: </TD> <TD>aca va la fecha de emision</TD> 
+    <TD>Fecha emision: </TD> <TD>{{$factura_especifica->fecha_emision}}</TD> 
   </TR>
+   
 </TABLE>
 
 
@@ -64,26 +68,29 @@ tr:hover td { background: #d0dafd; color: #339; }
             <th> Material</th>
            <th> Codigo</th>
           <th> Cantidad</th>
-          <th> obra asociada</th>
+          <th> Obra asociada</th>
 
           </thead>
           <tbody>
             <tr>
-
+    
             </tr>
-
-           
-        @foreach($facturas as $factura)
+          @foreach($mates as $mates)
             <tr>
-                <td > aca va el id</td>
-                <td>aca el material</td>
-                <td>aca va el codigo</td>
-                <td>aca va la cantidad</td>
-                <td>aca va la obra asociada</td>
+                <td>{{$mates->id}}</td>
+                <td>{{$mates->nombre}}</td>
+                <td>{{$mates->codigo}}</td>
+
+                <td >{{$mates->cantidad}}</td>
+                <td >{{$mates->nombre_obra}}</td>
+             
+               
             
 
             </tr>
             @endforeach
+           
+        
           </tbody>
         </table>
         
@@ -92,20 +99,20 @@ tr:hover td { background: #d0dafd; color: #339; }
 
 <TABLE BORDER class="tabla_3">
   <TR>
-    <TD>Tipo pago: </TD> <TD>aca va el tipo de pago</TD>
+    <TD>Tipo pago: </TD> <TD>{{$factura_especifica->tipo_pago}}</TD>
   </TR>
   <TR>
-    <TD>NETO: </TD> <TD>aca va el netor</TD> 
+    <TD>NETO: </TD> <TD>{{$factura_especifica->neto}}</TD> 
   </TR>
   <TR>
-    <TD>IVA: </TD> <TD>aca va el iva</TD> 
+    <TD>IVA: </TD> <TD>{{$factura_especifica->iva}}</TD> 
   </TR>
   <TR>
-    <TD>TOTAL: </TD> <TD>aca va la el total</TD> 
+    <TD>TOTAL: </TD> <TD>{{$factura_especifica->valor_total}}</TD> 
   </TR>
 </TABLE>
 
-
+@endforeach
 
 
       <div class="box-footer clearfix">

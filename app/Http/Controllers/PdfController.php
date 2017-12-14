@@ -8,6 +8,9 @@ use App\Obra;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Laracasts\Flash\Flash;
+use DB;
+use App\Material;
+use App\Pertenece;
 
 
 class PdfController extends Controller
@@ -50,11 +53,23 @@ class PdfController extends Controller
     }
 
 
-    public function crear_reporte_factura_especifica($tipo){
+    public function crear_reporte_factura_especifica($tipo,$factura_a_buscar){
 
 
-            $facturas = Factura::paginate(5);
-        $view =  \View::make('reporte_factura_especifica')->with('facturas',$facturas)->render();
+
+  $factura_especifica = DB::table('facturas')->where('numero_factura', $factura_a_buscar)->get();
+
+
+  $mates = Pertenece::leftjoin('materiales', 'materiales.id', '=', 'perteneces.material_id')
+            ->leftjoin('obras', 'materiales.obra_id', '=', 'obras.id')
+            ->select('materiales.id', 'nombre', 'codigo', 'cantidad', 'obra_id', 'obras.nombre_obra')
+            ->where('perteneces.factura_id', '=', $factura_a_buscar)
+            ->getQuery()
+            ->get();
+       
+
+          
+        $view =  \View::make('reporte_factura_especifica')->with('factura_especifica',$factura_especifica)->with('mates',$mates)->render();
         $pdf = \App::make('dompdf.wrapper');
         $pdf->loadHTML($view);
 

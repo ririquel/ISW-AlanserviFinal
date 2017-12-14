@@ -19,7 +19,7 @@ Route::get('/reportes', 'PdfController@index');
 Route::get('reportes/crear_reporte_todas_facturas/{tipo}', 'PdfController@crear_reporte_todas_facturas');
 Route::get('reportes/crear_reporte_todas_obras/{tipo}', 'PdfController@crear_reporte_todas_obras');
 
-Route::get('reportes/crear_reporte_factura_especifica/{tipo}', 'PdfController@crear_reporte_factura_especifica');
+Route::get('reportes/crear_reporte_factura_especifica/{tipo}/{factura_a_buscar}', 'PdfController@crear_reporte_factura_especifica');
 
 Route::resource('asignaciones', 'AsignacionesController');
 Route::resource('AsignacionesObra', 'AsignacionesObraController');

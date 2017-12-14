@@ -52,23 +52,12 @@
              <tr>
                       <td>3</td>
                       <td> VER DETALLE FACTURA EN ESPECIFICO&nbsp;&nbsp;
-      <select name="numero_factura_a_seleccionar" >
+                      <select name="numero_factura_a_seleccionar" METHOD="POST">
 
-      @foreach($facturas as $facturas)
-           <option value= {{$facturas->numero_factura}}>{{$facturas->numero_factura}}</option>  
-           @endforeach
-
-       
-
-
-        </select>
-       
-
-
-      
-
-
-   
+                   @foreach($facturas as $facturas)
+                  <option value= {{$facturas->numero_factura}}>{{$facturas->numero_factura}}</option>  
+                  @endforeach
+                  </select>
 
 
                       </td>
@@ -76,8 +65,8 @@
 
 
 
-                      <td><a href="reportes/crear_reporte_factura_especifica/1" target="_blank" ><button class="btn btn-block btn-primary btn-xs">Ver</button></a></td>
-                      <td><a href="reportes/crear_reporte_factura_especifica/2" target="_blank" ><button class="btn btn-block btn-success btn-xs">Descargar</button></a></td>
+                      <td><a href="reportes/crear_reporte_factura_especifica/1/2" target="_blank" ><button class="btn btn-block btn-primary btn-xs">Ver</button></a></td>
+                      <td><a href="reportes/crear_reporte_factura_especifica/2/2" target="_blank" ><button class="btn btn-block btn-success btn-xs">Descargar</button></a></td>
                      
 
            
