@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Factura;
+use App\Obra;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Laracasts\Flash\Flash;
@@ -18,19 +19,16 @@ class PdfController extends Controller
      */
   
     public function index(){
-
-        return view('reportes.index');
+ return view('reportes.index');
     }
 
 
-      public function crearPDF($vistaurl,$tipo)
+      public function crearPDF($pdf,$tipo)
     {
+       
 
 
-
-        $view =  \View::make($vistaurl)->render();
-        $pdf = \App::make('dompdf.wrapper');
-        $pdf->loadHTML($view);
+        
         
         if($tipo==1){return $pdf->stream('reporte');}
         if($tipo==2){return $pdf->download('reporte.pdf'); }
@@ -40,17 +38,29 @@ class PdfController extends Controller
 
     public function crear_reporte_todas_facturas($tipo){
 
-     $vistaurl="reporte_todas_facturas";
+
+            $facturas = Factura::paginate(5);
+        $view =  \View::make('reporte_todas_facturas')->with('facturas',$facturas)->render();
+        $pdf = \App::make('dompdf.wrapper');
+        $pdf->loadHTML($view);
+
+
+
      
-      return $this->crearPDF($vistaurl,$tipo);
+      return $this->crearPDF($pdf,$tipo);
 
     }
 
     public function crear_reporte_todas_obras($tipo){
 
-     $vistaurl="reporte_todas_obras";
+        $obra = Obra::paginate(5);
+        $view =  \View::make('reporte_todas_obras')->with('obra',$obra)->render();
+        $pdf = \App::make('dompdf.wrapper');
+        $pdf->loadHTML($view);
+
+
      
-     return $this->crearPDF($vistaurl,$tipo);
+     return $this->crearPDF($pdf,$tipo);
 
     }
 
