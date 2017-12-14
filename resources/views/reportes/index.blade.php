@@ -65,12 +65,7 @@
        
 
 
-       <?php
-$edad2 = $_POST['numero_factura_a_seleccionar'];
-
-         ?>
-
-        <td><?php echo $edad2;?></td>
+      
 
 
    
@@ -81,7 +76,7 @@ $edad2 = $_POST['numero_factura_a_seleccionar'];
 
 
 
-                      <td><a href="reportes/crear_reporte_factura_especifica/1/{{numero_factura_a_seleccionar}}" target="_blank" ><button class="btn btn-block btn-primary btn-xs">Ver</button></a></td>
+                      <td><a href="reportes/crear_reporte_factura_especifica/1" target="_blank" ><button class="btn btn-block btn-primary btn-xs">Ver</button></a></td>
                       <td><a href="reportes/crear_reporte_factura_especifica/2" target="_blank" ><button class="btn btn-block btn-success btn-xs">Descargar</button></a></td>
                      
 
