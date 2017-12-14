@@ -19,16 +19,14 @@ class PdfController extends Controller
      */
   
     public function index(){
- return view('reportes.index');
+         $facturas = Factura::paginate(5);
+ return view('reportes.index')->with('facturas',$facturas);
     }
 
 
       public function crearPDF($pdf,$tipo)
     {
        
-
-
-        
         
         if($tipo==1){return $pdf->stream('reporte');}
         if($tipo==2){return $pdf->download('reporte.pdf'); }
@@ -41,6 +39,22 @@ class PdfController extends Controller
 
             $facturas = Factura::paginate(5);
         $view =  \View::make('reporte_todas_facturas')->with('facturas',$facturas)->render();
+        $pdf = \App::make('dompdf.wrapper');
+        $pdf->loadHTML($view);
+
+
+
+     
+      return $this->crearPDF($pdf,$tipo);
+
+    }
+
+
+    public function crear_reporte_factura_especifica($tipo){
+
+
+            $facturas = Factura::paginate(5);
+        $view =  \View::make('reporte_factura_especifica')->with('facturas',$facturas)->render();
         $pdf = \App::make('dompdf.wrapper');
         $pdf->loadHTML($view);
 

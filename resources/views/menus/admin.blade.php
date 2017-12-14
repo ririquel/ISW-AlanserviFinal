@@ -76,8 +76,7 @@
                                                                class="pull-right hidden-xs showopacity glyphicon glyphicon-print"></span></a>
                         <ul class="dropdown-menu forAnimate" role="menu">
                             <li><a href="{{url('reportes')}}">Listado de Informes</a></li>
-                            <li><a href="">Buscar por Obra</a></li>
-                            <li><a href="">Buscar Facturas</a></li>
+                            
                         </ul>
                     </li>
                 </ul>

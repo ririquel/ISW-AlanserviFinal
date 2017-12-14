@@ -4,17 +4,16 @@
 
 @section('content')
 
-    <div class="container">
+    
+
+        
+
+@section('content')
+
+<div class="container">
         <div>
             <a class="btn btn-primary btn-lg" href="./home">Home</a>
         </div>
-
-        <h1>ASIGNACIONES</h1>
-        <div>
-            <p>Aqui se puede conocer la lista de Facturas y el detalle de los materiales asignados</p>
-
-
-@section('content')
 
     <div class="container">
         <h1>ASIGNACIONES</h1>
