@@ -4,17 +4,12 @@
 
 @section('content')
 
-
-
-
     <div class="container">
-        <div>
-            <a class="btn btn-primary btn-lg" href="../home">Home</a>
-            <a class="btn btn-primary btn-lg" href="../asignaciones">Atrás</a>
-        </div>
-
-
-    <div class="container">
+        <div class="container">
+            <div>
+                <a class="btn btn-primary btn-lg" href="../home">Home</a>
+                <a class="btn btn-primary btn-lg" href="../asignaciones">Atrás</a>
+            </div>
 
         <h1>ASIGNACIONES</h1>
         <div>

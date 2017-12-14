@@ -5,7 +5,6 @@
 @section('content')
 
     <div class="container">
-
         <div>
             <a class="btn btn-primary btn-lg" href="./home">Home</a>
         </div>
@@ -14,15 +13,10 @@
         <div>
             <h3>Aquí se puede conocer el listado de obras y el detalle de los materiales asignados</h3>
 
-        <h1>ASIGNACIONES</h1>
-        <div>
-            <h3>Estos son los materiales de la factura {{$id}}</h3>
-
 
             <table class="table table-responsive table-bordered table-striped table-hover">
                 <thead>
                 <tr>
-
                     <th>Nombre de la Obra</th>
                     <th>Direccion de la Obra</th>
                     <th>Empresa Mandante</th>
@@ -38,23 +32,6 @@
                         <td>{{$obra->empresa_obra}}</td>
                         <td>{{$obra->rubro_obra}}</td>
                         <td><a href="./AsignacionesObra/{{$obra->id}}">{{$obra->id}}</a></td>
-
-
-                    <th>ID. Material</th>
-                    <th>Nombre del Material</th>
-                    <th>Codigo del Material</th>
-                    <th>Cantidad de Material</th>
-                    <th>Obra Asociada</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($asi as $asis)
-                    <tr id="f1">
-                        <td>{{$asis->id}}</td>
-                        <td>{{$asis->nombre}}</td>
-                        <td>{{$asis->codigo}}</td>
-                        <td>{{$asis->cantidad}}</td>
-
                     </tr>
                 @endforeach
                 </tbody>

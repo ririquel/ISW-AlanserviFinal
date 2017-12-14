@@ -17,6 +17,7 @@ class CreateMateriales extends Migration
             $table->string('nombre');
             $table->string('codigo');
             $table->integer('cantidad');
+            $table->integer('precio_unitario');
             $table->integer('obra_id')->unsigned();
             $table->foreign('obra_id')->references('id')->on('obras')->onDelete('cascade');
             $table->timestamps();

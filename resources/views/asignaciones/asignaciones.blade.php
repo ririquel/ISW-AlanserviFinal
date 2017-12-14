@@ -1,27 +1,15 @@
 @extends('layouts.app')
-
 @section('title','LISTA DE ASIGNACIONES')
 
 @section('content')
 
-    
-
-        
-
-@section('content')
-
-<div class="container">
+    <div class="container">
         <div>
             <a class="btn btn-primary btn-lg" href="./home">Home</a>
         </div>
-
-    <div class="container">
         <h1>ASIGNACIONES</h1>
         <div>
             <p>Aqui se puede ver la lista de Facturas y el detalle de sus materiales asignados</p>
-
-
-
             <table class="table table-responsive table-bordered">
                 <thead>
                 <tr>
@@ -47,8 +35,6 @@
             </table>
         </div>
     </div>
-
-
 
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"

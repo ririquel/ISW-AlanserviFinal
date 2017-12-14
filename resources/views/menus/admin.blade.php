@@ -46,17 +46,14 @@
                             <li><a href="{{route('obras.create')}}">Lista de Obras</a></li>
                         </ul>
                     </li>
-                    <!--Menu de asignacion -->
+                     <!--Menu de asignacion -->
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Buscar asignación<span
                                     class="caret"></span><span style="font-size:16px;"
                                                                class="pull-right hidden-xs showopacity glyphicon glyphicon-search"></span></a>
                         <ul class="dropdown-menu forAnimate" role="menu">
-
                             <li><a href="{{url('asignaciones')}}">Por facturas</a></li>
                             <li><a href="{{url('AsignacionesObra')}}">Por obras</a></li>
-
-                            <li><a href="{{url('asignaciones')}}">Por obra</a></li>
                         </ul>
                     </li>
                     <!--Menu de Materiales-->
